@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #99D9D9;
+}
+
+body {
+    padding: 5%;
+}
+
+/* Botones */
+.mybtn {
+    color: beige;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    border: none;
+}
+
+.btnbox {
+    display: flex;
+    justify-content: space-between; /* Mejora el espaciado */
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los botones bajen en pantallas pequeñas */
+}
+
+.buttondesing {
+    border-radius: 10px;
+    background-color: #5BB9B9;
+    padding: 12px 24px;
+}
+
+.buttondesing:hover {
+    background-color: #3a9c9b;
+}
+
+/* Texto */
+p {
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+/* Estilos del texto de Laboratorios Mare */
+.texto {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: white;
+    text-align: justify;
+    padding: 5%;
+}
+
+.slogan {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    text-align: left;
+    padding: 5%;
+}
+
+/* Botón "Agotado" */
+.boton-agotado {
+    background-color: #17243D;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin: 20px auto; /* Centra el botón automáticamente */
+}
+
+/* Contenedores generales */
+.hidden {
+    display: none !important;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+/* Imágenes */
+.imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que bajen en pantallas pequeñas */
+}
+
+.imagenes img {
+    max-width: 100%; /* Se adapta al tamaño de la pantalla */
+    height: auto;
+}
+
+.imagenes img:hover {
+    transform: scale(1.1);
+}
+
+/* Secciones de contraseña y video */
+#password-section,
+#password-section-2,
+#video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+input[type="password"],
+input[type="text"] {
+    text-align: center;
+    max-width: 100%;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* 🟢 MEDIA QUERIES: Adaptación a móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 3%;
+    }
+
+    .texto {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .slogan {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .imagenes img {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 300px; /* Tamaño máximo en móviles */
+    }
+
+    .btnbox {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .boton-agotado {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto {
+        font-size: 24px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .imagenes img {
+        max-width: 250px;
+    }
+}

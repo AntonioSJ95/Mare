@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morir es vivir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="btnbox">
+        <a href="productos.html">
+        <button class="mybtn buttondesing">
+            Productos
+        </button>
+        </a>
+        <a href="conocenos.html">
+        <button class="mybtn buttondesing">
+            Conócenos
+        </button>
+        </a>
+        <a href="index.html">
+        <button class="mybtn buttondesing empleado">
+            Inicio
+        </button>
+        </a>
+    </div>
+
+        <div id="password-section">
+            <p>Numero de empleado</p>
+            <input type="string" id="password1">
+            <button onclick="validarPrimeraContraseña()">Aceptar</button>
+        </div>
+
+      <!-- Sección de imágenes -->
+    <div id="image-selection" class="hidden">
+        <p>Elige una imagen</p>
+        <div class="imagenes">
+            <img src="/imagenes/img1.png" onclick="imagenSeleccionada(1)">
+            <img src="/imagenes/img2.png" onclick="imagenSeleccionada(2)">
+            <img src="/imagenes/img3.png" onclick="imagenSeleccionada(3)">
+        </div>
+    </div>
+
+    <div id="password-section-2" class="hidden">
+        <p>Ingresa la segunda contraseña</p>
+        <input type="password" id="password2">
+        <button onclick="validarSegundaContraseña()">Aceptar</button>
+    </div>
+
+    <div id="video-section" class="hidden">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lEO59lZaqYc?si=w-45JZOriUtp-AsY&amp;start=115" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+
+    <script>
+        function validarPrimeraContraseña() {
+            let password1 = document.getElementById("password1").value;
+            if (password1 === "72") {
+                document.getElementById("password-section").classList.add("hidden");
+                document.getElementById("image-selection").classList.remove("hidden");
+            } else {
+                alert("Contraseña incorrecta. Intenta de nuevo.");
+            }
+        }
+
+        function imagenSeleccionada(numero) {
+            if (numero === 2) {
+                document.getElementById("image-selection").classList.add("hidden");
+                document.getElementById("password-section-2").classList.remove("hidden");
+            } else {
+                alert("Estas ingresando a algo que no deberias...");
+            }
+        }
+
+        function validarSegundaContraseña() {
+            let password2 = document.getElementById("password2").value;
+            if (password2 === "458") {
+                document.getElementById("password-section-2").classList.add("hidden");
+                document.getElementById("video-section").classList.remove("hidden");
+            } else {
+                alert("Contraseña incorrecta. Intenta de nuevo.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
